@@ -920,7 +920,7 @@ CAND is a string returned by `counsel--M-x-externs'."
   (setq prefix-arg current-prefix-arg)
   (setq this-command cmd)
   (setq real-this-command cmd)
-  (command-execute cmd 'record))
+  (execute-extended-command current-prefix-arg (symbol-name cmd)))
 
 ;;;###autoload
 (defun counsel-M-x (&optional initial-input)
